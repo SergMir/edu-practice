@@ -5,7 +5,7 @@
 ./qemu_build/qemu-system-riscv64 \
     -smp 4 \
     -machine virt \
-    -cpu rv64,v=true,vlen=128 \
+    -cpu rv64,v=true,vlen=128,sscofpmf=true \
     -m 256m \
     -nographic \
     -bios $SBI_OUT \
