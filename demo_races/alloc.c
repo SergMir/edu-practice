@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
+
+static uint64_t rdtime(void)
+{
+	uint64_t t;
+	__asm__ volatile("fence; rdtime %[time]; fence\n" : [time] "=r" (t) : );
+	return t;
+}
 
 static void alloc_1x1T(void) {
 	const size_t zsize = (size_t)1024 * 1024 * 1024 * 1024;
@@ -26,6 +34,14 @@ static void alloc_1x1T(void) {
 
 	const int M = 1024 * 1024;
 	const int P = 4 * 1024;
+
+	for (size_t m = 0; m < 32 * 1024; m += 128) {
+		uint64_t before = rdtime();
+		WRITE_ONCE(arr[zsize / 2 + m], 0);
+		uint64_t after = rdtime();
+		printf("m %8zu * 4K + %4u: %8u\n", m / P, m % P, after - before);
+	}
+
 	for (size_t m = 0; m < zsize; m += M) {
 		for (size_t p = 0; p < M; ++p) {
 			WRITE_ONCE(arr[zsize / 2 + m + p], 0);
