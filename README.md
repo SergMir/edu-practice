@@ -15,15 +15,15 @@ echo "set auto-load safe-path /" >> ~/.gdbinit
 sudo dnf install \
   ncurses-devel perl-ExtUtils-MakeMaker ninja-build \
   glib2-devel pixman-devel libslirp-devel \
-  flex bison perl \
-  gcc gcc-c++ make
+  perl-IPC-Cmd perl-open lz4 gawk make gcc \
+  libmpc-devel gmp-devel
 
 # Ubuntu
 sudo apt install \
   libncurses-dev libextutils-makemaker-cpanfile-perl ninja-build \
-  libglib2.0-dev libpixman-1-dev libslirp-dev \
-  flex bison perl \
-  gcc g++ make
+  libglib2.0-dev libpixman-1-dev libslirp-dev
+  libipc-run-perl lz4 gawk make gcc \
+  libmpc-dev libgmp-dev
 ```
 
 * Build everything:
