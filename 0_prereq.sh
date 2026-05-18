@@ -10,10 +10,12 @@
 #sudo apt install libncurses-dev libextutils-makemaker-cpanfile-perl ninja-build libglib2.0-dev libpixman-1-dev libslirp-dev libipc-run-perl lz4 gawk libmpc-dev libgmp-dev
 
 git clone -b 2026.02.x git://git.busybox.net/buildroot
-git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
-cd linux; git checkout v6.19; cd ..
-git clone https://github.com/riscv-software-src/opensbi.git
-cd opensbi; git checkout v1.8; cd ..
+git clone https://github.com/J3RRyE/linux-task.git linux
+cd linux; git switch tatarenko_t/hw1; cd ..
+# cd linux; git checkout v6.19; cd ..
+git clone https://github.com/J3RRyE/opensbi-task.git opensbi
+cd opensbi; git switch tatarenko_t/hw1; cd ..
+# cd opensbi; git checkout v1.8; cd ..
 git clone https://github.com/qemu/qemu.git
 cd qemu; git checkout v10.2.0; cd ..
 git clone https://github.com/hugsy/gef.git
