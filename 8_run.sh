@@ -1,11 +1,16 @@
 #/bin/sh
 
+    # -cpu rv64,v=true,vlen=128,sscofpmf=true \
+    # -cpu rv64,v=false,sscofpmf=true \
+    # -cpu rv64,v=false,h=false,sscofpmf=true \
+    # варианты флагов чтобы вывод немного отличался
+
 . ./config.sh
 
 ./qemu_build/qemu-system-riscv64 \
     -smp 4 \
     -machine virt \
-    -cpu rv64,v=true,vlen=128,sscofpmf=true \
+    -cpu rv64,v=false,h=false,sscofpmf=true \
     -m 256m \
     -nographic \
     -bios $SBI_OUT \
