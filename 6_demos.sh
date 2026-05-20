@@ -23,6 +23,9 @@ cp demo_races/dropbear_ed25519_host_key $ROOTFS_OVERLAY/etc/dropbear
 CC=${CROSS_COMPILE}gcc make -C demo_races/pagemap
 cp demo_races/pagemap/pagemap $ROOTFS_OVERLAY/opt/
 
+CC=${CROSS_COMPILE}gcc make -C demo_races/pagetree
+cp demo_races/pagetree/pagetree $ROOTFS_OVERLAY/opt/
+
 #CC=${CROSS_COMPILE}gcc OBJCOPY=${CROSS_COMPILE}objcopy make -C ../crackme
 cp demo_races/crackme $ROOTFS_OVERLAY/opt/
 
