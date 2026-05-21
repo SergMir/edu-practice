@@ -7,6 +7,7 @@ mkdir -p ${ROOTFS_OVERLAY}/opt
 ${CROSS_COMPILE}gcc -O2 -g demo_races/compiler_opts.c -o $ROOTFS_OVERLAY/opt/compiler_opts
 ${CROSS_COMPILE}gcc -O2 -g demo_races/cpu_opts.c -o $ROOTFS_OVERLAY/opt/cpu_opts
 ${CROSS_COMPILE}gcc -O2 -g demo_races/icache.c -o $ROOTFS_OVERLAY/opt/icache
+${CROSS_COMPILE}gcc -O2 -g demo_races/machine_oracle.c -o $ROOTFS_OVERLAY/opt/machine_oracle
 ${CROSS_COMPILE}gcc -O2 -g demo_races/small.c -o $ROOTFS_OVERLAY/opt/small
 ${CROSS_COMPILE}gcc -O0 -g demo_races/small.c -o $ROOTFS_OVERLAY/opt/small_no_opt
 ${CROSS_COMPILE}gcc -O2 -g -fno-stack-protector demo_races/memset.c -o $ROOTFS_OVERLAY/opt/memset
