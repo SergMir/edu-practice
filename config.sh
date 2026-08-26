@@ -7,7 +7,7 @@ set -e
 set -x
 
 JOBS=`nproc`
-CROSS_COMPILE=$PWD/output/toolchain/bin/riscv64-buildroot-linux-gnu-
+CROSS_COMPILE=$PWD/output/toolchain/bin/riscv64-linux-
 
 ROOTS_OUT=$PWD/output/rootfs.cpio
 KERNEL_OUT=$PWD/output/vmlinux.bin

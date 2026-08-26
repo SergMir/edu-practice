@@ -9,6 +9,9 @@
 # Ubuntu
 #sudo apt install libncurses-dev libextutils-makemaker-cpanfile-perl ninja-build libglib2.0-dev libpixman-1-dev libslirp-dev libipc-run-perl lz4 gawk libmpc-dev libgmp-dev
 
+# Download the Bootling "bleeding edge" toolchain, and unpack it to the /opt/toolchains:
+# wget "https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64-lp64d/tarballs/riscv64-lp64d--glibc--bleeding-edge-2025.08-1.tar.xz"
+
 git clone git://git.busybox.net/buildroot
 cd buildroot; git checkout 2026.05.1; cd ..
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
