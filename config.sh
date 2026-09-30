@@ -9,8 +9,10 @@ set -x
 JOBS=`nproc`
 CROSS_COMPILE=$PWD/output/toolchain/bin/riscv64-linux-
 
-ROOTS_OUT=$PWD/output/rootfs.cpio
+ROOTS_OUT=$PWD/output/rootfs.uimage
 KERNEL_OUT=$PWD/output/vmlinux.bin
 SBI_OUT=$PWD/output/fw_dynamic.bin
 SBI_ELF=$PWD/output/fw_dynamic.elf
+UBOOT_SPL=$PWD/output/u-boot-spl
+UBOOT_PROPER=$PWD/output/u-boot.itb
 ROOTFS_OVERLAY=$PWD/rootfs_overlay
