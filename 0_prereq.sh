@@ -13,7 +13,7 @@
 # wget "https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64-lp64d/tarballs/riscv64-lp64d--glibc--bleeding-edge-2025.08-1.tar.xz"
 
 git clone git://git.busybox.net/buildroot
-cd buildroot; git checkout 2026.05.1; cd ..
+cd buildroot; git checkout 2026.08; cd ..
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux; git checkout v7.2; cd ..
 git clone https://github.com/riscv-software-src/opensbi.git

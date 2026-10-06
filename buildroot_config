@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2026.05.1 Configuration
+# Buildroot 2026.08 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -110,7 +110,7 @@ BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_BLEEDING_EDGE=y
 # BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_UCLIBC_STABLE is not set
 BR2_TOOLCHAIN_EXTERNAL_GDB_SERVER_COPY=y
 BR2_PACKAGE_HOST_GDB_ARCH_SUPPORTS=y
-BR2_GDB_VERSION="15.2"
+BR2_GDB_VERSION="16.3"
 
 #
 # Toolchain Generic Options
@@ -429,7 +429,7 @@ BR2_PACKAGE_KODI_ARCH_SUPPORTS=y
 #
 
 #
-# kodi needs udev support for gbm
+# kodi needs libudev support for gbm
 #
 
 #
@@ -593,6 +593,7 @@ BR2_PACKAGE_STRACE=y
 # BR2_PACKAGE_CHECK is not set
 BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 # BR2_PACKAGE_CMAKE_CTEST is not set
+# BR2_PACKAGE_CPP_ARGPARSE is not set
 # BR2_PACKAGE_CPPUNIT is not set
 # BR2_PACKAGE_CUKINIA is not set
 # BR2_PACKAGE_CUNIT is not set
@@ -778,7 +779,7 @@ BR2_PACKAGE_E2FSPROGS_FSCK=y
 BR2_PACKAGE_IGT_GPU_TOOLS_ARCH_SUPPORTS=y
 
 #
-# igt-gpu-tools needs udev /dev management and toolchain w/ NPTL, wchar, dynamic library, locale, headers >= 4.11
+# igt-gpu-tools needs libudev and a toolchain w/ NPTL, wchar, dynamic library, locale, headers >= 4.11
 #
 # BR2_PACKAGE_JHEAD is not set
 
@@ -794,7 +795,7 @@ BR2_PACKAGE_NETSURF_ARCH_SUPPORTS=y
 # BR2_PACKAGE_SPIRV_TOOLS is not set
 
 #
-# stellarium needs Qt5 and an OpenGL provider
+# stellarium needs Qt5/6 and an OpenGL provider
 #
 
 #
@@ -827,7 +828,9 @@ BR2_PACKAGE_NETSURF_ARCH_SUPPORTS=y
 # BR2_PACKAGE_PSPLASH is not set
 # BR2_PACKAGE_SDL is not set
 # BR2_PACKAGE_SDL2 is not set
+# BR2_PACKAGE_SDL3 is not set
 # BR2_PACKAGE_SPIRV_HEADERS is not set
+# BR2_PACKAGE_VIRGLRENDERER is not set
 # BR2_PACKAGE_VULKAN_HEADERS is not set
 # BR2_PACKAGE_VULKAN_LOADER is not set
 # BR2_PACKAGE_VULKAN_SDK is not set
@@ -964,6 +967,7 @@ BR2_PACKAGE_FLASHROM_ARCH_SUPPORTS=y
 # BR2_PACKAGE_GPSD is not set
 # BR2_PACKAGE_GPTFDISK is not set
 # BR2_PACKAGE_GVFS is not set
+# BR2_PACKAGE_HARE_DBUS is not set
 # BR2_PACKAGE_HDDTEMP is not set
 # BR2_PACKAGE_HDPARM is not set
 # BR2_PACKAGE_HWDATA is not set
@@ -1135,7 +1139,7 @@ BR2_PACKAGE_PCIUTILS=y
 #
 
 #
-# usbutils needs udev /dev management and toolchain w/ threads, gcc >= 4.9
+# usbutils needs libudev and a toolchain w/ threads, gcc >= 4.9
 #
 
 #
@@ -1209,6 +1213,7 @@ BR2_PACKAGE_GTKIOSTREAM_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBGSM is not set
 # BR2_PACKAGE_LIBID3TAG is not set
 # BR2_PACKAGE_LIBILBC is not set
+# BR2_PACKAGE_LIBLC3 is not set
 # BR2_PACKAGE_LIBLO is not set
 # BR2_PACKAGE_LIBMAD is not set
 # BR2_PACKAGE_LIBMODPLUG is not set
@@ -1315,6 +1320,7 @@ BR2_PACKAGE_PROVIDES_HOST_OPENSSL="host-libopenssl"
 # BR2_PACKAGE_PARSEC_TOOL is not set
 # BR2_PACKAGE_PKCS11_HELPER is not set
 # BR2_PACKAGE_RHASH is not set
+# BR2_PACKAGE_SIGSUM_C is not set
 # BR2_PACKAGE_TINYDTLS is not set
 # BR2_PACKAGE_TPM2_OPENSSL is not set
 # BR2_PACKAGE_TPM2_PKCS11 is not set
@@ -1534,7 +1540,7 @@ BR2_PACKAGE_GNU_EFI_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBIIO is not set
 
 #
-# libinput needs udev /dev management
+# libinput needs libudev
 #
 # BR2_PACKAGE_LIBLLCP is not set
 # BR2_PACKAGE_LIBMBIM is not set
@@ -1558,6 +1564,7 @@ BR2_PACKAGE_LIBNVME=y
 #
 # libss7 needs a Linux kernel to be built
 #
+# BR2_PACKAGE_LIBUDEV_ZERO is not set
 # BR2_PACKAGE_LIBUSB is not set
 # BR2_PACKAGE_LIBUSBGX is not set
 # BR2_PACKAGE_LIBV4L is not set
@@ -1579,6 +1586,7 @@ BR2_PACKAGE_LIBNVME=y
 # BR2_PACKAGE_BENEJSON is not set
 # BR2_PACKAGE_CJSON is not set
 # BR2_PACKAGE_EXPAT is not set
+# BR2_PACKAGE_HARE_XML is not set
 # BR2_PACKAGE_JANSSON is not set
 # BR2_PACKAGE_JOSE is not set
 # BR2_PACKAGE_JSMN is not set
@@ -1690,6 +1698,7 @@ BR2_PACKAGE_LIBCAMERA_ARCH_SUPPORTS=y
 # BR2_PACKAGE_DAQ3 is not set
 # BR2_PACKAGE_DAVICI is not set
 # BR2_PACKAGE_DHT is not set
+# BR2_PACKAGE_DROGON is not set
 # BR2_PACKAGE_ENET is not set
 # BR2_PACKAGE_FILEMQ is not set
 # BR2_PACKAGE_FREERADIUS_CLIENT is not set
@@ -1705,6 +1714,7 @@ BR2_PACKAGE_LIBCAMERA_ARCH_SUPPORTS=y
 # BR2_PACKAGE_IBRDTN is not set
 # BR2_PACKAGE_LIBCGICC is not set
 # BR2_PACKAGE_LIBCOAP is not set
+# BR2_PACKAGE_LIBCPPCONNMAN is not set
 # BR2_PACKAGE_LIBCPPRESTSDK is not set
 # BR2_PACKAGE_LIBCURL is not set
 # BR2_PACKAGE_LIBDNET is not set
@@ -1875,6 +1885,7 @@ BR2_PACKAGE_GOBJECT_INTROSPECTION_ARCH_SUPPORTS=y
 # BR2_PACKAGE_GSL is not set
 # BR2_PACKAGE_GTEST is not set
 # BR2_PACKAGE_GUMBO_PARSER is not set
+# BR2_PACKAGE_HARE_EV is not set
 # BR2_PACKAGE_HIGHWAY is not set
 BR2_PACKAGE_JEMALLOC_ARCH_SUPPORTS=y
 # BR2_PACKAGE_JEMALLOC is not set
@@ -2126,7 +2137,7 @@ BR2_PACKAGE_Z3_ARCH_SUPPORTS=y
 # BR2_PACKAGE_BIND is not set
 
 #
-# bind needs a toolchain w/ threads, dynamic library, C++, gcc >= 4.9
+# bind needs a toolchain w/ NPTL, dynamic library, C++, gcc >= 4.9
 #
 # BR2_PACKAGE_BIRD is not set
 # BR2_PACKAGE_BLUEZ5_UTILS is not set
@@ -2381,6 +2392,7 @@ BR2_PACKAGE_NETCAT=y
 # BR2_PACKAGE_VTUN is not set
 # BR2_PACKAGE_WAVEMON is not set
 # BR2_PACKAGE_WGET is not set
+# BR2_PACKAGE_WGET2 is not set
 # BR2_PACKAGE_WHOIS is not set
 
 #
@@ -2495,6 +2507,7 @@ BR2_PACKAGE_NETCAT=y
 #
 # Utilities
 #
+# BR2_PACKAGE_AGEC is not set
 # BR2_PACKAGE_APG is not set
 # BR2_PACKAGE_AT is not set
 # BR2_PACKAGE_CATATONIT is not set
@@ -2579,6 +2592,7 @@ BR2_PACKAGE_SUDO=y
 # BR2_PACKAGE_DOCKER_CREDENTIAL_ACR_ENV is not set
 # BR2_PACKAGE_DOCKER_CREDENTIAL_GCR is not set
 # BR2_PACKAGE_DOCKER_ENGINE is not set
+# BR2_PACKAGE_DTUI is not set
 # BR2_PACKAGE_EARLYOOM is not set
 # BR2_PACKAGE_EFIBOOTMGR is not set
 BR2_PACKAGE_EFIVAR_ARCH_SUPPORTS=y
@@ -2896,6 +2910,8 @@ BR2_PACKAGE_HOST_GO_BOOTSTRAP_STAGE4_ARCH_SUPPORTS=y
 BR2_PACKAGE_HOST_GO_BOOTSTRAP_STAGE5_ARCH_SUPPORTS=y
 BR2_PACKAGE_HOST_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 # BR2_PACKAGE_HOST_GPTFDISK is not set
+BR2_PACKAGE_HOST_HARE_TARGET_ARCH_SUPPORTS=y
+# BR2_PACKAGE_HOST_HARE is not set
 # BR2_PACKAGE_HOST_IMAGEMAGICK is not set
 # BR2_PACKAGE_HOST_IMX_MKIMAGE is not set
 # BR2_PACKAGE_HOST_JH71XX_TOOLS is not set
@@ -2979,6 +2995,24 @@ BR2_PACKAGE_HOST_UTIL_LINUX=y
 #
 # Legacy config options
 #
+
+#
+# Legacy options removed in 2026.08
+#
+# BR2_PACKAGE_FLUIDSYNTH_SDL2 is not set
+# BR2_PACKAGE_HOSTAPD_DRIVER_HOSTAP is not set
+# BR2_GDB_VERSION_ARC is not set
+# BR2_BINUTILS_VERSION_ARC is not set
+# BR2_GCC_VERSION_ARC is not set
+# BR2_TOOLCHAIN_EXTERNAL_SYNOPSYS_ARC is not set
+# BR2_PACKAGE_TS4900_FPGA is not set
+# BR2_GDB_VERSION_14 is not set
+# BR2_PACKAGE_ARGPARSE is not set
+# BR2_KERNEL_HEADERS_7_0 is not set
+# BR2_PACKAGE_BLUEZ5_UTILS_PLUGINS_SAP is not set
+# BR2_PACKAGE_BLUEZ5_UTILS_PLUGINS_HEALTH is not set
+# BR2_GCC_VERSION_13_X is not set
+# BR2_PACKAGE_QEMU_TARGET_MICROBLAZEEL is not set
 
 #
 # Legacy options removed in 2026.05
