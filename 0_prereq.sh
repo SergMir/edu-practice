@@ -23,8 +23,8 @@ cd qemu; git checkout v11.1.1; cd ..
 git clone https://git.u-boot-project.org/u-boot/u-boot.git
 cd u-boot; git checkout v2026.07; cd ..
 git clone https://github.com/hugsy/gef.git
-git clone https://github.com/dwks/pagemap.git demo_races/pagemap
-sed -i 's/CC = gcc/CC ?= gcc/' demo_races/pagemap/Makefile
+git clone https://github.com/dwks/pagemap.git demos/pagemap
+sed -i 's/CC = gcc/CC ?= gcc/' demos/pagemap/Makefile
 
 mkdir -p output
 mkdir -p $ROOTFS_OVERLAY

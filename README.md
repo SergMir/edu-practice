@@ -58,8 +58,8 @@ sudo apt install \
 * Read and edit the code
 
 ```shell
-$EDITOR demo_races/compiler_opts.c
-$EDITOR demo_races/cpu_opts.c
+$EDITOR demos/compiler_opts.c
+$EDITOR demos/cpu_opts.c
 ```
 
 * Rebuild and re-run
