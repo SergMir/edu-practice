@@ -11,6 +11,7 @@ ${CROSS_COMPILE}gcc -O2 -g demos/small.c -o $ROOTFS_OVERLAY/opt/small
 ${CROSS_COMPILE}gcc -O0 -g demos/small.c -o $ROOTFS_OVERLAY/opt/small_no_opt
 ${CROSS_COMPILE}gcc -O2 -g -fno-stack-protector demos/memset.c -o $ROOTFS_OVERLAY/opt/memset
 ${CROSS_COMPILE}gcc -O2 -g -fno-stack-protector demos/alloc.c -o $ROOTFS_OVERLAY/opt/alloc
+${CROSS_COMPILE}gcc -O2 -g demos/qemu_first_task.c -o $ROOTFS_OVERLAY/opt/qemu_first_task
 
 cp --preserve=mode demos/gdbs.sh $ROOTFS_OVERLAY/opt
 mkdir -p $ROOTFS_OVERLAY/etc/profile.d
