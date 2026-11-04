@@ -12,9 +12,9 @@
 # Download the Bootling "bleeding edge" toolchain, and unpack it to the /opt/toolchains:
 # wget "https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64-lp64d/tarballs/riscv64-lp64d--glibc--bleeding-edge-2025.08-1.tar.xz"
 
-git clone git://git.busybox.net/buildroot
+git clone https://github.com/buildroot/buildroot.git
 cd buildroot; git checkout 2026.08; cd ..
-git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux; git checkout v7.2; cd ..
 git clone https://github.com/riscv-software-src/opensbi.git
 cd opensbi; git checkout v1.9; cd ..
