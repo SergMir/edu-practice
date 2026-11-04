@@ -12,18 +12,18 @@
 # Download the Bootling "bleeding edge" toolchain, and unpack it to the /opt/toolchains:
 # wget "https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64-lp64d/tarballs/riscv64-lp64d--glibc--bleeding-edge-2025.08-1.tar.xz"
 
-git clone https://github.com/buildroot/buildroot.git
+[ -d buildroot ] || git clone https://github.com/buildroot/buildroot.git
 cd buildroot; git checkout 2026.08; cd ..
-git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+[ -d linux ] || git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux; git checkout v7.2; cd ..
-git clone https://github.com/riscv-software-src/opensbi.git
+[ -d opensbi ] || git clone https://github.com/riscv-software-src/opensbi.git
 cd opensbi; git checkout v1.9; cd ..
-git clone https://github.com/qemu/qemu.git
+[ -d qemu ] || git clone https://github.com/qemu/qemu.git
 cd qemu; git checkout v11.1.1; cd ..
-git clone https://git.u-boot-project.org/u-boot/u-boot.git
+[ -d u-boot ] || git clone https://git.u-boot-project.org/u-boot/u-boot.git
 cd u-boot; git checkout v2026.07; cd ..
-git clone https://github.com/hugsy/gef.git
-git clone https://github.com/dwks/pagemap.git demos/pagemap
+[ -d gef ] || git clone https://github.com/hugsy/gef.git
+[ -d demos/pagemap ] || git clone https://github.com/dwks/pagemap.git demos/pagemap
 sed -i 's/CC = gcc/CC ?= gcc/' demos/pagemap/Makefile
 
 mkdir -p output
